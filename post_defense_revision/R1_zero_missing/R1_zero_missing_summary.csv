@@ -1,0 +1,2 @@
+﻿Canonical_Rows,Stations,Numeric_Zero_Rows,Missing_Rows,Positive_Rows,CSV_Blank_Missing_Rows,CSV_Sentinel_Minus999,CSV_Sentinel_999999,CSV_Sentinel_9999,CSV_Sentinel_Dash,SevenHour_Evaluable_Rows,S0_Events_Recomputed,Official_Def5_Events,Exact_Official_Key_Match,Max_Structural_Absence_Within_StationYear,Conclusion
+4393680,40,3499499,679973,214208,679973,0,0,0,0,3554919,1123,1123,True,0,PASS

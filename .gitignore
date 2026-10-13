@@ -44,3 +44,6 @@ Thumbs.db
 web/dist/
 web/.cache/
 node_modules/
+
+# Local post-defense revision config
+post_defense_revision/config.json
