@@ -1,0 +1,2 @@
+﻿Stations,Convex_Hull_Area_km2,Grid_Inside_Hull,Grid_Outside_Hull_Not_Interpolated,Inside_Grid_P90_NearestStation_km,Variogram_Nugget,Variogram_Sill,Variogram_Range_m,Preferred_By_RMSE
+40,16559.86453995884,10683,3717,24.883602890740914,8.824156491960714,83.795975457983,55385.1526896777,OK

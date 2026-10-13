@@ -1,0 +1,4 @@
+Definition,Events,Overlap_with_Frozen,Added_vs_Frozen,Removed_vs_Frozen,Jaccard_vs_Frozen
+Frozen_P99,1123,1123,0,0,1.0
+Annual_P99,1006,965,41,158,0.8290378006872853
+Rolling_PriorYears_P99,1070,1029,41,94,0.884020618556701

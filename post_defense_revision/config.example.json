@@ -1,0 +1,15 @@
+﻿{
+    "workspace_version":  "1.0",
+    "canonical_root":  "\u003cPATH_TO_WORKPLACE_CODE\u003e",
+    "canonical_access":  "read-only",
+    "development_end":  "2024-06-30 23:00:00",
+    "holdout_policy":  "2025 is descriptive only and never used to select thresholds or tune models",
+    "missing_codes":  [
+                          "-999",
+                          "999999",
+                          "9999",
+                          "-"
+                      ],
+    "status_if_unresolved":  "UNCERTAIN",
+    "final_analysis_root":  "\u003cPATH_TO_RAINBOMB_FINAL_ANALYSIS\u003e"
+}

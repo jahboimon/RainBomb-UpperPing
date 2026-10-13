@@ -1,0 +1,125 @@
+{
+  "created_utc": "2026-10-13T09:22:46.766508+00:00",
+  "workspace": "C:\\Users\\Pannathat\\.codex\\.chatgpt-projects\\g-p-6a54ccaca2308191899e8252d07d04a7\\post_defense_revision",
+  "canonical_root": "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code",
+  "canonical_access": "read-only",
+  "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:58) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "protected_input_hashes_before": {
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Rainfall_Canonical_2012_2025_Final_v1\\PROCESS_Hourly_Rain_Canonical_2012_2025_v1.parquet": "5bb50740b81d7bf79d41190e326730c8bfda186f3b10c5be2384ead7c5c48b3d",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Rainfall_Canonical_2012_2025_Final_v1\\PROCESS_Hourly_Rain_Canonical_2012_2025_v1.csv": "162ab82267c477db0874a3b1406d0970095ac42a89c41cd39c42a33f8c640914",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\RainBomb_Def4_2012_2025_v1\\Def4_Frozen_P99_2012_2024H1_v1.csv": "242e362aff50196dbd981fc2cd1a5b6ddbc60ef5ef2bdb30b04ce5f3cb7bac34",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Def5_Final_Target_2012_2025_v1\\02_Def5_Extended_Target\\RainBomb_Target_Def5_2012_2025_v1.csv": "552a957f78a0faaac4cf007169677f233ba47b66037d7967eeea0f7a9ed2c7f9",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Hourly_rain\\RESETWORKPLACE\\02_processed\\Station_Metadata_Cleaned.csv": "c8ad54e3cd5a3ad1591c7c9766c1b3296a67a9a5dd8d657c4fc60bd2573396bb",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Hourly_rain\\RESETWORKPLACE\\02_processed\\PROCESS_01_Hourly_Rain_Cleaned.csv": "d59f8f7b631d1fe16b7da52eda36fc467fbd6b18573f46aac94bc5971a51b37b",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\PhaseB_Atmospheric\\ERA5\\05_StationHour_Canonical\\ERA5_StationHour_2013_2025_v1.parquet": "4f1835c3385ce9a7796bce7c14b86b82896c29eaf1413b4e312f705a5aacb627"
+  },
+  "protected_input_hashes_after": {
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Rainfall_Canonical_2012_2025_Final_v1\\PROCESS_Hourly_Rain_Canonical_2012_2025_v1.parquet": "5bb50740b81d7bf79d41190e326730c8bfda186f3b10c5be2384ead7c5c48b3d",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Rainfall_Canonical_2012_2025_Final_v1\\PROCESS_Hourly_Rain_Canonical_2012_2025_v1.csv": "162ab82267c477db0874a3b1406d0970095ac42a89c41cd39c42a33f8c640914",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\RainBomb_Def4_2012_2025_v1\\Def4_Frozen_P99_2012_2024H1_v1.csv": "242e362aff50196dbd981fc2cd1a5b6ddbc60ef5ef2bdb30b04ce5f3cb7bac34",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Def5_Final_Target_2012_2025_v1\\02_Def5_Extended_Target\\RainBomb_Target_Def5_2012_2025_v1.csv": "552a957f78a0faaac4cf007169677f233ba47b66037d7967eeea0f7a9ed2c7f9",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Hourly_rain\\RESETWORKPLACE\\02_processed\\Station_Metadata_Cleaned.csv": "c8ad54e3cd5a3ad1591c7c9766c1b3296a67a9a5dd8d657c4fc60bd2573396bb",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Hourly_rain\\RESETWORKPLACE\\02_processed\\PROCESS_01_Hourly_Rain_Cleaned.csv": "d59f8f7b631d1fe16b7da52eda36fc467fbd6b18573f46aac94bc5971a51b37b",
+    "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\PhaseB_Atmospheric\\ERA5\\05_StationHour_Canonical\\ERA5_StationHour_2013_2025_v1.parquet": "4f1835c3385ce9a7796bce7c14b86b82896c29eaf1413b4e312f705a5aacb627"
+  },
+  "protected_inputs_unchanged": true,
+  "rules": {
+    "missing_is_never_zero": true,
+    "2025_used_for_tuning": false,
+    "frozen_outputs_written": false
+  },
+  "results": {
+    "R1": {
+      "Canonical_Rows": 4393680,
+      "Stations": 40,
+      "Numeric_Zero_Rows": 3499499,
+      "Missing_Rows": 679973,
+      "Positive_Rows": 214208,
+      "CSV_Blank_Missing_Rows": 679973,
+      "CSV_Sentinel_Minus999": 0,
+      "CSV_Sentinel_999999": 0,
+      "CSV_Sentinel_9999": 0,
+      "CSV_Sentinel_Dash": 0,
+      "SevenHour_Evaluable_Rows": 3554919,
+      "S0_Events_Recomputed": 1123,
+      "Official_Def5_Events": 1123,
+      "Exact_Official_Key_Match": true,
+      "Max_Structural_Absence_Within_StationYear": 0,
+      "Conclusion": "PASS"
+    },
+    "R2_annual_rows": 446,
+    "R3_scenarios": [
+      {
+        "Scenario": "S0_Def5",
+        "Events": 1123,
+        "Added_vs_S0": 0,
+        "Removed_vs_S0": 0,
+        "Overlap_with_S0": 1123,
+        "Jaccard_with_S0": 1.0
+      },
+      {
+        "Scenario": "A1_Antecedent_LE10mm",
+        "Events": 1289,
+        "Added_vs_S0": 166,
+        "Removed_vs_S0": 0,
+        "Overlap_with_S0": 1123,
+        "Jaccard_with_S0": 0.8712179984484096
+      },
+      {
+        "Scenario": "A2_Antecedent_LE20mm",
+        "Events": 1429,
+        "Added_vs_S0": 306,
+        "Removed_vs_S0": 0,
+        "Overlap_with_S0": 1123,
+        "Jaccard_with_S0": 0.7858642407277817
+      },
+      {
+        "Scenario": "P1_PostBelowStationHeavyThreshold",
+        "Events": 1128,
+        "Added_vs_S0": 5,
+        "Removed_vs_S0": 0,
+        "Overlap_with_S0": 1123,
+        "Jaccard_with_S0": 0.9955673758865248
+      },
+      {
+        "Scenario": "P2_PostRestrictionRemoved_FiniteOnly",
+        "Events": 1185,
+        "Added_vs_S0": 62,
+        "Removed_vs_S0": 0,
+        "Overlap_with_S0": 1123,
+        "Jaccard_with_S0": 0.9476793248945148
+      },
+      {
+        "Scenario": "I1_StationWetHour_P99_5",
+        "Events": 717,
+        "Added_vs_S0": 0,
+        "Removed_vs_S0": 406,
+        "Overlap_with_S0": 717,
+        "Jaccard_with_S0": 0.6384683882457702
+      },
+      {
+        "Scenario": "I2_StationWetHour_P99_9",
+        "Events": 170,
+        "Added_vs_S0": 0,
+        "Removed_vs_S0": 953,
+        "Overlap_with_S0": 170,
+        "Jaccard_with_S0": 0.15138023152270705
+      }
+    ],
+    "R4_cv": [
+      {
+        "Method": "IDW",
+        "MAE": 6.210395941296537,
+        "RMSE": 7.732746825910722,
+        "Bias": 0.16982847245921534
+      },
+      {
+        "Method": "OK",
+        "MAE": 6.00180468354082,
+        "RMSE": 7.602884943437224,
+        "Bias": 0.16267061428272084
+      }
+    ]
+  }
+}
