@@ -1,0 +1,26 @@
+feature_set: Compact20
+target: Target_Def5_tPlus1
+predictors:
+  - Rain_t
+  - RainSum_3h
+  - RainSum_6h
+  - RH_t
+  - RHMin_6h
+  - Temp_t
+  - TempMax_6h
+  - Hour_sin
+  - Hour_cos
+  - Month_sin
+  - Month_cos
+  - Elevation_m
+  - SUHI_5K
+  - BuiltUp_Binary
+  - d2m
+  - u10
+  - v10
+  - q_850
+  - u_850
+  - v_850
+notes:
+  BuiltUp_Binary: "1 only when frozen LULC_Class equals 9; otherwise 0"
+  forecast_unit: "predictors at t forecast Def5 at t+1 hour"

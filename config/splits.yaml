@@ -1,0 +1,10 @@
+season_months: [5, 6, 7, 8, 9, 10]
+time_reference: Target_Datetime
+roles:
+  Train: [2020, 2021, 2022, 2023]
+  Validation: [2024]
+  Evaluation: [2025]
+expected:
+  Train: {rows: 525474, positives: 312, stations: 40}
+  Validation: {rows: 129671, positives: 74, stations: 39}
+  Evaluation: {rows: 121296, positives: 95, stations: 38}

@@ -1,0 +1,27 @@
+Environment inspection date: 2026-10-13 Asia/Bangkok
+
+Legacy XGBoost environment (read-only inspection):
+  Python 3.12.13 (Anaconda; MSC v.1942 64-bit)
+  numpy 2.4.3
+  pandas 2.3.3
+  pyarrow 23.0.1
+  scikit-learn 1.8.0
+  xgboost 3.4.0
+  joblib 1.5.3
+  matplotlib 3.11.1
+  polars 1.38.1
+  PyYAML: not installed
+  geopandas: not installed
+
+Current artifact-building environment supplied PyYAML 6.0.3 and geopandas 1.1.3.
+No environment was reinstalled or upgraded. The requirements file combines the observed core modeling versions with the path-config/spatial requirements for a new isolated environment; it is not proof that every historical script used one identical environment.
+
+Repository validation note:
+  pytest was not installed in the active migration environment. The same nine plain
+  assertion functions were executed with Python directly and all passed. pytest is
+  listed in requirements.txt for normal repository use.
+
+Web derivative environment (read-only inspection):
+  numpy 2.4.0; pandas 2.3.3; geopandas 1.1.3; pyogrio 0.11.1;
+  rasterio 1.4.4; Pillow 12.1.1; scikit-learn 1.8.0; PyYAML 6.0.3;
+  GDAL command-line tools 3.11.4.

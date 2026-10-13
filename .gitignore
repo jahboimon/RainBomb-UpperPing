@@ -1,0 +1,46 @@
+# Local path configuration and secrets
+config/paths.yaml
+.env
+.env.*
+*.key
+*.pem
+*credentials*
+*secret*
+
+# Python and environments
+.venv/
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Large/raw scientific data
+data/raw/
+data/canonical/
+runtime/
+03_OUTPUT/
+*.nc
+*.nc4
+*.grib
+*.grib2
+*.parquet
+*.gdb/
+*.tif
+*.tiff
+
+# Generated/temporary artifacts
+.codex_tmp*/
+.codex_phase*/
+*render_qa*/
+*.inspect.ndjson
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Web build/cache directories (source is web/app)
+web/dist/
+web/.cache/
+node_modules/

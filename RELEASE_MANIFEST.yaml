@@ -1,0 +1,68 @@
+release: RainBomb_FinalAnalysis_v2_Compact20
+created_for_repository: 2026-10-13
+policy: "Frozen scientific artifacts are referenced by original path and SHA-256; only compact Git-suitable artifacts are copied."
+artifacts:
+  - id: def5_target
+    role: frozen_target
+    status: frozen_canonical
+    original_path: D:/STUDY_GEO/2569_1/154499/Workplace_Code/Def5_Final_Target_2012_2025_v1/02_Def5_Extended_Target/RainBomb_Target_Def5_2012_2025_v1.parquet
+    repo_path: null
+    sha256: 2e6d3e0379caa07700f42bc4c7124ac43236ad8f22b82d85ff6fc073d8cbd9eb
+    rows: 1123
+  - id: def5_t_plus_1_target
+    role: frozen_evaluable_target
+    status: frozen_canonical
+    original_path: D:/STUDY_GEO/2569_1/154499/Workplace_Code/Def5_Final_Target_2012_2025_v1/04_Def5_Plus1h_Target/ML_Base_StationHour_Target_Def5_t1_2012_2025_v1.parquet
+    repo_path: null
+    sha256: d3d23aa9a9ee5abbc7bd4713320a4382c34a4d6fcbac86e1f1a42d85f2074961
+    rows: 3554919
+  - id: seasonal_modeling_universe
+    role: final_analysis_population
+    status: frozen_derived
+    original_path: D:/STUDY_GEO/2569_1/154499/RainBomb_FinalAnalysis_v2/03_OUTPUT/03_Seasonal_Modeling_Universe/Seasonal_Modeling_Universe_v1.parquet
+    repo_path: null
+    sha256: 9284920f45d22ef19fa63e40517e251313aa547baad206960c1de746713794c0
+    rows: 776441
+  - id: compact20_table
+    role: final_model_table
+    status: frozen_derived
+    original_path: D:/STUDY_GEO/2569_1/154499/RainBomb_FinalAnalysis_v2/03_OUTPUT/05_Model_Comparison/ModelReady_Seasonal_Compact20_v1.parquet
+    repo_path: null
+    sha256: d77c69a86f1b1251e09f37451a59f68e0a25c7f9307542b549b17e8b2e7d8a83
+    rows: 776441
+  - id: final_xgb_model
+    role: final_model
+    status: frozen_final
+    original_path: D:/STUDY_GEO/2569_1/154499/RainBomb_FinalAnalysis_v2/03_OUTPUT/06_Final_Model_Evaluation/XGB_Final_Compact20_v1.json
+    repo_path: outputs/models/XGB_Final_Compact20_v1.json
+    sha256: 0c43852b2cd1f60dc89efd225331bd6251691a8f835ea3c6df65cb5cfaa274cd
+    boosting_rounds: 53
+  - id: evaluation_2025_predictions
+    role: frozen_one_time_evaluation
+    status: frozen_final
+    original_path: D:/STUDY_GEO/2569_1/154499/RainBomb_FinalAnalysis_v2/03_OUTPUT/06_Final_Model_Evaluation/Evaluation2025_Actual_vs_Predicted_v1.parquet
+    repo_path: null
+    sha256: 5faa5f5ea634f34384463c49fc8ae96a9dc7f90c9eea0e12b1f5145c158ac43a
+    rows: 121296
+    positives: 95
+  - id: evaluation_2025_metrics
+    role: final_metrics
+    status: frozen_final
+    original_path: D:/STUDY_GEO/2569_1/154499/RainBomb_FinalAnalysis_v2/03_OUTPUT/06_Final_Model_Evaluation/Evaluation2025_Metrics_v1.csv
+    repo_path: outputs/tables/Evaluation2025_Metrics_v1.csv
+    sha256: a4be9f972cb7dae775536e570b50a47790226b70edb6fc525686dbe53e5e60f2
+    rows: 1
+  - id: evaluation_2025_shap
+    role: frozen_model_attribution
+    status: frozen_final
+    original_path: D:/STUDY_GEO/2569_1/154499/RainBomb_FinalAnalysis_v2/03_OUTPUT/07_SHAP_XAI/Evaluation2025_SHAP_v1.parquet
+    repo_path: null
+    sha256: 95918e14000e8da89d6090cbb05be14bf686e9ea444244db66d0f4681b4c1d90
+    rows: 121296
+  - id: station_spatial_summary
+    role: final_spatial_summary
+    status: frozen_derived
+    original_path: D:/STUDY_GEO/2569_1/154499/RainBomb_FinalAnalysis_v2/03_OUTPUT/08_Spatial_Analysis/Station_Evaluation_Spatial_Summary_v1.csv
+    repo_path: outputs/tables/Station_Evaluation_Spatial_Summary_v1.csv
+    sha256: a5e633b51bf0ffdfebf92d5c1d084e0465c2052be99d1fe608a9775182d6ba79
+    rows: 38

@@ -1,0 +1,10 @@
+id,role,status,rows,bundled
+def5_target,frozen_target,frozen_canonical,1123,false
+def5_t_plus_1_target,frozen_evaluable_target,frozen_canonical,3554919,false
+seasonal_modeling_universe,final_analysis_population,frozen_derived,776441,false
+compact20_table,final_model_table,frozen_derived,776441,false
+final_xgb_model,final_model,frozen_final,,true
+evaluation_2025_predictions,frozen_one_time_evaluation,frozen_final,121296,false
+evaluation_2025_metrics,final_metrics,frozen_final,1,true
+evaluation_2025_shap,frozen_model_attribution,frozen_final,121296,false
+station_spatial_summary,final_spatial_summary,frozen_derived,38,true

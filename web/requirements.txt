@@ -1,0 +1,11 @@
+# Observed environment for optional downstream web-derivative builders.
+numpy==2.4.0
+pandas==2.3.3
+geopandas==1.1.3
+pyogrio==0.11.1
+rasterio==1.4.4
+Pillow==12.1.1
+scikit-learn==1.8.0
+PyYAML==6.0.3
+
+# build_web_data.py also requires GDAL command-line tools (observed: 3.11.4).

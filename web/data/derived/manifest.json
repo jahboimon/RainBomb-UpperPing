@@ -1,0 +1,519 @@
+{
+  "title": "RainBomb Atlas derived web-data manifest",
+  "scope": "Evaluation 2025 model outputs plus a separate official observed Def5 event catalogue for 2012–2025.",
+  "generated_by": "scripts/build_web_data.py",
+  "scientific_operations": "None. Operations are format conversion, coordinate reprojection, documented display simplification/resampling, exact key joins, and requested hourly visualization aggregation.",
+  "source_policy": "All sources were opened read-only; no source file was modified, renamed, moved, or deleted.",
+  "timezone": "ERA5 was converted from UTC to Asia/Bangkok (ICT, UTC+7) before station-hour joining; station-source timezone remains unverified, so stored timestamps are displayed without further conversion.",
+  "vectors": [
+    {
+      "derived_file": "dist/data/derived/vector/station_metadata.geojson",
+      "source": "ML_Visualize.gdb/Station_Metadata_Point",
+      "source_crs": "EPSG:32647",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 40,
+      "fields": [
+        "Basin_Name",
+        "Cleaned_Rows",
+        "Data_Coverage_Note",
+        "District",
+        "Elevation_m",
+        "First_Datetime",
+        "Last_Datetime",
+        "Latitude",
+        "Longitude",
+        "Province",
+        "Region",
+        "Shared_Data",
+        "Station",
+        "Station_Name",
+        "Station_Type",
+        "Sub_Basin_Name",
+        "Subdistrict"
+      ],
+      "conversion": "Direct geometry/attribute conversion; no scientific recalculation.",
+      "size_bytes": 29762,
+      "sha256": "4a462f748a6b76e6380e59532a6733ed61439772383887aa31b75c73ca958414"
+    },
+    {
+      "derived_file": "dist/data/derived/vector/station_summary_2025.geojson",
+      "source": "ML_Visualize.gdb/GIS_Station_Model_Summary_2025_Point",
+      "source_crs": "EPSG:4326",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 38,
+      "fields": [
+        "Available_Hours",
+        "BuiltUp_Binary",
+        "Def5_Count",
+        "Def5_Rate_per100k",
+        "Elevation_m",
+        "FN",
+        "FP",
+        "FP_Rate",
+        "Latitude",
+        "Longitude",
+        "Mean_XGB_Score",
+        "Median_XGB_Score",
+        "Recall",
+        "SUHI_5K",
+        "Station",
+        "TN",
+        "TP",
+        "Station_Name",
+        "Province",
+        "District"
+      ],
+      "conversion": "Joined station name/province/district by authoritative Station key.",
+      "size_bytes": 24256,
+      "sha256": "fd5840c20d947769a56e3190bfd10049ab9dc62c481ba3114f9c4c853ba30ee6"
+    },
+    {
+      "derived_file": "dist/data/derived/vector/def5_events_2025.geojson",
+      "source": "ML_Visualize.gdb/GIS_Def5_Events_2025_XYTableToPoint",
+      "source_crs": "EPSG:4326",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 95,
+      "fields": [
+        "Datetime",
+        "Latitude",
+        "Longitude",
+        "Outcome_0p5",
+        "Station",
+        "Target_Datetime",
+        "Target_Def5_tPlus1",
+        "XGB_Final_Score",
+        "XGB_Predicted_0p5",
+        "Rainfall",
+        "P99_Frozen",
+        "Antecedent_3h_Rain",
+        "Post1_Rain",
+        "Post2_Rain",
+        "Post3_Rain",
+        "Post3_Max",
+        "Def5",
+        "Station_Name",
+        "Province",
+        "District"
+      ],
+      "conversion": "Matched 2025 frozen Def5 event metadata by Station + event hour (GDB Target_Datetime = target Datetime).",
+      "size_bytes": 61930,
+      "sha256": "c5efe2808489692b520b233356398c457dc63367fa58510aeca0665d16526300"
+    },
+    {
+      "derived_file": "dist/data/derived/vector/station_shap_2025.geojson",
+      "source": "ML_Visualize.gdb/GIS_Station_SHAP_Long_2025_XYTableToPoint",
+      "source_crs": "EPSG:4326",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 760,
+      "fields": [
+        "Feature",
+        "Feature_Group",
+        "Latitude",
+        "Longitude",
+        "MeanAbsSHAP",
+        "MeanSignedSHAP",
+        "MedianAbsSHAP",
+        "N",
+        "Station"
+      ],
+      "conversion": "Direct geometry/attribute conversion; no scientific recalculation.",
+      "size_bytes": 271150,
+      "sha256": "010d9d39dbc547399964b84d203dec56807fd9a6403a8c803b3d1ce26506ceaa"
+    },
+    {
+      "derived_file": "dist/data/derived/vector/admin_boundaries.geojson",
+      "source": "ML_Visualize.gdb/adm_Bound",
+      "source_crs": "EPSG:4326",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 3,
+      "fields": [
+        "ADM0_EN",
+        "ADM0_TH",
+        "ADM1_EN",
+        "ADM1_PCODE",
+        "ADM1_TH"
+      ],
+      "conversion": "Direct geometry/attribute conversion; no scientific recalculation. Display-copy geometry simplified at 0.0002 degrees with topology preserved.",
+      "size_bytes": 353948,
+      "sha256": "6ad2c8630c1f57fb82dddb947c2a3f704395a973d05f0a8eeb0e899f75a3d9c5"
+    },
+    {
+      "derived_file": "dist/data/derived/vector/upper_ping_boundary.geojson",
+      "source": "ML_Visualize.gdb/upper_ping_Bound",
+      "source_crs": "EPSG:32647",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 1,
+      "fields": [
+        "Shape_Area",
+        "Shape_Length"
+      ],
+      "conversion": "Direct geometry/attribute conversion; no scientific recalculation.",
+      "size_bytes": 809093,
+      "sha256": "01c447963bb1abe96ccc0661dc84ee51efb099d58f053fe317ae792eed21a617"
+    },
+    {
+      "derived_file": "dist/data/derived/vector/rivers_upper_ping.geojson",
+      "source": "ML_Visualize.gdb/HydroRIVERS_upperPing",
+      "source_crs": "EPSG:4326",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 229,
+      "fields": [
+        "DIS_AV_CMS",
+        "HYRIV_ID",
+        "LENGTH_KM",
+        "MAIN_RIV",
+        "MBASIN_E",
+        "ORD_CLAS",
+        "ORD_STRA",
+        "SB_NAME__1_First"
+      ],
+      "conversion": "Direct geometry/attribute conversion; no scientific recalculation. Display-copy geometry simplified at 0.0001 degrees with topology preserved.",
+      "size_bytes": 95762,
+      "sha256": "f3543555f2b1c110b24de6c674d7baf3979094fcee6ffb703da950228cfdb3ba"
+    },
+    {
+      "derived_file": "dist/data/derived/vector/def5_events_2012_2025.geojson",
+      "source": "D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Def5_Final_Target_2012_2025_v1\\02_Def5_Extended_Target\\RainBomb_Target_Def5_2012_2025_v1.parquet",
+      "source_crs": "Station coordinates joined from the verified web station-metadata derivative",
+      "web_crs": "EPSG:4326 (RFC 7946)",
+      "feature_count": 1123,
+      "fields": [
+        "Station",
+        "Station_Name",
+        "Province",
+        "District",
+        "Target_Datetime",
+        "Rainfall",
+        "P99_Frozen",
+        "Antecedent_3h_Rain",
+        "Post1_Rain",
+        "Post2_Rain",
+        "Post3_Rain",
+        "Post3_Max",
+        "Def5",
+        "Observation_Scope"
+      ],
+      "conversion": "Exact observed Def5 event attributes joined to station geometry by Station; no model outcome inferred and no scientific recalculation.",
+      "size_bytes": 562003,
+      "sha256": "31c081b49376b7c54f1aff8bd884e87355cb2aca49e4b207bbcd9462b35d9a65"
+    }
+  ],
+  "rasters": [
+    {
+      "source": "ML_Visualize.gdb/KDE_Rain_t_MeanAbs_R20km_C1km",
+      "source_type": "File Geodatabase raster",
+      "source_crs": "EPSG:32647",
+      "source_size": [
+        143,
+        310
+      ],
+      "source_nodata": 3.4e+38,
+      "derived_cog": "dist/data/derived/raster/kde_rain_t_meanabs_r20km_c1km_wgs84.cog.tif",
+      "derived_png": "dist/data/derived/raster/kde_rain_t_meanabs_r20km_c1km_styled.png",
+      "style_table": "dist/data/derived/style/kde_rain_t_meanabs_r20km_c1km_color.txt",
+      "web_crs": "EPSG:4326",
+      "web_size": [
+        150,
+        308
+      ],
+      "web_nodata": -9999.0,
+      "web_bounds": [
+        98.0461767,
+        17.0077041,
+        99.4135279,
+        19.8153319
+      ],
+      "resampling": "nearest-neighbour display resampling, matching ArcGIS .lyrx",
+      "styling": "ArcGIS .lyrx minimum–maximum stretch translated to a continuous RGBA ramp",
+      "display_min": 0.0,
+      "display_max": 0.0025530210696160793,
+      "source_statistics": null,
+      "hillshade": null,
+      "bandwidth_m": 20000,
+      "cell_size_m": 1000,
+      "cog_size_bytes": 66477,
+      "png_size_bytes": 21959,
+      "cog_sha256": "69bf3d52d5f34d0364a1f2d15a47ef27d7af5c0e37349a8462d9fca4a7b0ecd9",
+      "png_sha256": "ba440799f607944b8230e1ec4383d6fb2c85ab69d6133ef39dd4b65927217ac3",
+      "style_size_bytes": 170,
+      "style_sha256": "26ec0f00ba4fa2bfdbf95d786f71953d10e338071aee9c6b025b68affeca0b0d"
+    },
+    {
+      "source": "ML_Visualize.gdb/KDE_q_850_MeanAbs_R20km_C1km",
+      "source_type": "File Geodatabase raster",
+      "source_crs": "EPSG:32647",
+      "source_size": [
+        143,
+        310
+      ],
+      "source_nodata": 3.4e+38,
+      "derived_cog": "dist/data/derived/raster/kde_q_850_meanabs_r20km_c1km_wgs84.cog.tif",
+      "derived_png": "dist/data/derived/raster/kde_q_850_meanabs_r20km_c1km_styled.png",
+      "style_table": "dist/data/derived/style/kde_q_850_meanabs_r20km_c1km_color.txt",
+      "web_crs": "EPSG:4326",
+      "web_size": [
+        150,
+        308
+      ],
+      "web_nodata": -9999.0,
+      "web_bounds": [
+        98.0461767,
+        17.0077041,
+        99.4135279,
+        19.8153319
+      ],
+      "resampling": "nearest-neighbour display resampling, matching ArcGIS .lyrx",
+      "styling": "ArcGIS .lyrx minimum–maximum stretch translated to a continuous RGBA ramp",
+      "display_min": 0.0,
+      "display_max": 0.004480093251913786,
+      "source_statistics": null,
+      "hillshade": null,
+      "bandwidth_m": 20000,
+      "cell_size_m": 1000,
+      "cog_size_bytes": 66653,
+      "png_size_bytes": 22802,
+      "cog_sha256": "783d0fd21cfcdbdc218cb9f410264c9c0057c3de49357d44d3e7b0062157dce7",
+      "png_sha256": "4d8c0a1d840112b75afdecaa31aef4d517db4143ed94ddd101905ab50979d0e7",
+      "style_size_bytes": 169,
+      "style_sha256": "f57f95391cadc01044d6443984c5af7cbc3f7c8e16fedb6865fc7c6e50390a41"
+    },
+    {
+      "source": "ML_Visualize.gdb/KDE_u_850_MeanAbs_R20km_C1km",
+      "source_type": "File Geodatabase raster",
+      "source_crs": "EPSG:32647",
+      "source_size": [
+        143,
+        310
+      ],
+      "source_nodata": 3.4e+38,
+      "derived_cog": "dist/data/derived/raster/kde_u_850_meanabs_r20km_c1km_wgs84.cog.tif",
+      "derived_png": "dist/data/derived/raster/kde_u_850_meanabs_r20km_c1km_styled.png",
+      "style_table": "dist/data/derived/style/kde_u_850_meanabs_r20km_c1km_color.txt",
+      "web_crs": "EPSG:4326",
+      "web_size": [
+        150,
+        308
+      ],
+      "web_nodata": -9999.0,
+      "web_bounds": [
+        98.0461767,
+        17.0077041,
+        99.4135279,
+        19.8153319
+      ],
+      "resampling": "nearest-neighbour display resampling, matching ArcGIS .lyrx",
+      "styling": "ArcGIS .lyrx minimum–maximum stretch translated to a continuous RGBA ramp",
+      "display_min": 0.0,
+      "display_max": 0.00492524541914463,
+      "source_statistics": null,
+      "hillshade": null,
+      "bandwidth_m": 20000,
+      "cell_size_m": 1000,
+      "cog_size_bytes": 66657,
+      "png_size_bytes": 24021,
+      "cog_sha256": "d1934cc4ead9b1d13121f4056746848d23399e6115b053992f7f81fba0c5d215",
+      "png_sha256": "0c7c85928cb5561595872d49c469fce629237e3e2acc851b820cd7902f0c36ed",
+      "style_size_bytes": 169,
+      "style_sha256": "ff9fe3cdc9b112f1f6cf969dc4c1115f3f90333bb822c8e9c454cd01c4315979"
+    },
+    {
+      "source": "ML_Visualize.gdb/KDE_u10_MeanAbs_R20km_C1km",
+      "source_type": "File Geodatabase raster",
+      "source_crs": "EPSG:32647",
+      "source_size": [
+        143,
+        310
+      ],
+      "source_nodata": 3.4e+38,
+      "derived_cog": "dist/data/derived/raster/kde_u10_meanabs_r20km_c1km_wgs84.cog.tif",
+      "derived_png": "dist/data/derived/raster/kde_u10_meanabs_r20km_c1km_styled.png",
+      "style_table": "dist/data/derived/style/kde_u10_meanabs_r20km_c1km_color.txt",
+      "web_crs": "EPSG:4326",
+      "web_size": [
+        150,
+        308
+      ],
+      "web_nodata": -9999.0,
+      "web_bounds": [
+        98.0461767,
+        17.0077041,
+        99.4135279,
+        19.8153319
+      ],
+      "resampling": "nearest-neighbour display resampling, matching ArcGIS .lyrx",
+      "styling": "ArcGIS .lyrx minimum–maximum stretch translated to a continuous RGBA ramp",
+      "display_min": 0.0,
+      "display_max": 0.001594220520928502,
+      "source_statistics": null,
+      "hillshade": null,
+      "bandwidth_m": 20000,
+      "cell_size_m": 1000,
+      "cog_size_bytes": 66520,
+      "png_size_bytes": 21959,
+      "cog_sha256": "185c66f5e7d75a54aef5e7019332aad97106aabbea81a1fb90577f94ddea41d6",
+      "png_sha256": "225ca0772b8c5c952b3a68ea945a1cce1cc652cae3015c485f924b1012f5305d",
+      "style_size_bytes": 171,
+      "style_sha256": "5a7d75697cf7ada1f417ec012e450338014222809f2d6b8271e478d3c046f3b8"
+    },
+    {
+      "source": "ML_Visualize.gdb/KDE_Temp_t_MeanAbs_R20km_C1km",
+      "source_type": "File Geodatabase raster",
+      "source_crs": "EPSG:32647",
+      "source_size": [
+        143,
+        310
+      ],
+      "source_nodata": 3.4e+38,
+      "derived_cog": "dist/data/derived/raster/kde_temp_t_meanabs_r20km_c1km_wgs84.cog.tif",
+      "derived_png": "dist/data/derived/raster/kde_temp_t_meanabs_r20km_c1km_styled.png",
+      "style_table": "dist/data/derived/style/kde_temp_t_meanabs_r20km_c1km_color.txt",
+      "web_crs": "EPSG:4326",
+      "web_size": [
+        150,
+        308
+      ],
+      "web_nodata": -9999.0,
+      "web_bounds": [
+        98.0461767,
+        17.0077041,
+        99.4135279,
+        19.8153319
+      ],
+      "resampling": "nearest-neighbour display resampling, matching ArcGIS .lyrx",
+      "styling": "ArcGIS .lyrx minimum–maximum stretch translated to a continuous RGBA ramp",
+      "display_min": 0.0,
+      "display_max": 0.001761085819453001,
+      "source_statistics": null,
+      "hillshade": null,
+      "bandwidth_m": 20000,
+      "cell_size_m": 1000,
+      "cog_size_bytes": 66412,
+      "png_size_bytes": 22328,
+      "cog_sha256": "8309fd7b8436abd0933948429032e632a4e44c3fde52186d2155ffac5a230ffa",
+      "png_sha256": "7b6bb6297be058149b4e06b88bf09b2e4e5e5d9ea19e8a481e17cb2d33526028",
+      "style_size_bytes": 168,
+      "style_sha256": "3a2caa3b17a62beceebc6354810c8e4d6f36fb5432ee0f4ace85be4b26a02906"
+    },
+    {
+      "source": "ML_Visualize.gdb/Elev_m",
+      "source_type": "File Geodatabase raster",
+      "source_crs": "EPSG:32647",
+      "source_size": [
+        4762,
+        10340
+      ],
+      "source_nodata": null,
+      "derived_cog": "dist/data/derived/raster/elev_m_wgs84.cog.tif",
+      "derived_png": "dist/data/derived/raster/elev_m_styled.png",
+      "style_table": "dist/data/derived/style/elev_m_color.txt",
+      "web_crs": "EPSG:4326",
+      "web_size": [
+        1400,
+        2838
+      ],
+      "web_nodata": -9999,
+      "web_bounds": [
+        98.0302029,
+        17.0091352,
+        99.4165395,
+        19.8194377
+      ],
+      "resampling": "bilinear display resampling for continuous elevation",
+      "styling": "Natural continuous hypsometric tint informed by the ArcGIS .lyrx, with a 2nd–98th percentile display stretch and 24% hillshade blend; source values remain unchanged",
+      "display_min": 284.0,
+      "display_max": 1481.0,
+      "source_statistics": {
+        "unit": "metres (authoritative source layer name: Elev_m)",
+        "valid_cell_count": 27570612,
+        "minimum": 213.0,
+        "p02": 284.0,
+        "p25": 477.0,
+        "mean": 755.4862705260224,
+        "median": 725.0,
+        "p75": 991.0,
+        "p98": 1481.0,
+        "maximum": 2578.0
+      },
+      "hillshade": {
+        "derived_file": "dist/data/derived/raster/elev_m_hillshade_wgs84.tif",
+        "azimuth_degrees": 315,
+        "altitude_degrees": 42,
+        "blend_strength": 0.24,
+        "size_bytes": 3979786,
+        "sha256": "bf44662034f396131f85b835788189b31010f1b325799e3e0720dcd07c2299c6"
+      },
+      "bandwidth_m": null,
+      "cell_size_m": null,
+      "cog_size_bytes": 3992136,
+      "png_size_bytes": 3118099,
+      "cog_sha256": "9d4e44671595f0eb22f7a33a6fdc3e4c9b3b8aa6be0d33818b8901702c723d55",
+      "png_sha256": "39f3974d3271d8e3360b4da5186d96e5f4f1a2a2333eef150cb69c845248d85d",
+      "style_size_bytes": 124,
+      "style_sha256": "856f2da2d2d2f9612ee14aea642265796a611e940191c2cfb3c04dec15da2b19"
+    }
+  ],
+  "tabular": [
+    {
+      "derived_file": "dist/data/derived/model_hourly_2025.json",
+      "source": "D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\06_Final_Model_Evaluation\\Evaluation2025_Actual_vs_Predicted_v1.parquet",
+      "record_count": 4416,
+      "conversion": "Specified hourly aggregation: sum of actual-positive and predicted-positive station rows by Target_Datetime.",
+      "size_bytes": 581710,
+      "sha256": "a488e5664caf762c7fda5e9adaf816573c738c8f3c42af3e454e02f401878c7f"
+    },
+    {
+      "derived_file": "dist/data/derived/model_metrics_2025.json",
+      "source": "D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\06_Final_Model_Evaluation\\Evaluation2025_Actual_vs_Predicted_v1.parquet",
+      "record_count": 1,
+      "conversion": "Verification metrics calculated from frozen prediction rows; no model refit or threshold change.",
+      "size_bytes": 586,
+      "sha256": "0199ec650810193b8b172c09b6585b35d7af6f9657ac6dd846b01527575d845b"
+    },
+    {
+      "derived_file": "dist/data/derived/samples_data_lineage_2025.json",
+      "source": "D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\05_Model_Comparison\\ModelReady_Seasonal_Compact20_v1.parquet; D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\06_Final_Model_Evaluation\\Evaluation2025_Actual_vs_Predicted_v1.parquet; D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\07_SHAP_XAI\\Evaluation2025_SHAP_v1.parquet",
+      "record_count": 9,
+      "conversion": "Small deterministic real-row teaching sample; exact key reuse; no synthetic values or scientific recalculation.",
+      "size_bytes": 18390,
+      "sha256": "f70905a85977e572727bdd323d5a16804d76ad3f64bffd936e9edaf865f7e666"
+    },
+    {
+      "derived_file": "dist/data/derived/scenario_baselines_2025.json",
+      "source": "D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\07_SHAP_XAI\\Evaluation2025_SHAP_v1.parquet; D:\\STUDY_GEO\\2569_1\\154499\\Workplace_Code\\Def5_Final_Target_2012_2025_v1\\02_Def5_Extended_Target\\RainBomb_Target_Def5_2012_2025_v1.parquet",
+      "record_count": 120,
+      "conversion": "Real Evaluation baselines with exact station-hour rainfall lag lookup; frozen 3 h and 6 h sums verified.",
+      "size_bytes": 267367,
+      "sha256": "ae20c963eed8536b903250327488e6a87a4f03299ab57a68f6093632346658fd"
+    },
+    {
+      "derived_file": "dist/data/derived/model/xgb_validation_2025.json",
+      "source": "D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\06_Final_Model_Evaluation\\XGB_Final_Compact20_v1.json; D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\07_SHAP_XAI\\Evaluation2025_SHAP_v1.parquet",
+      "record_count": 512,
+      "conversion": "Deterministic validation sample; exact JSON traversal max absolute error 7.528e-08 at tolerance 1.0e-06.",
+      "size_bytes": 419297,
+      "sha256": "aae7a4df11ec1f9cdcfc7f4cd5a9a088b1f5ac8549d8e58f0c025633f5c65cac"
+    },
+    {
+      "derived_file": "dist/data/derived/model/xgb_final_compact20_v1.json",
+      "source": "D:\\STUDY_GEO\\2569_1\\154499\\RainBomb_FinalAnalysis_v2\\03_OUTPUT\\06_Final_Model_Evaluation\\XGB_Final_Compact20_v1.json",
+      "record_count": 53,
+      "conversion": "Byte-for-byte copy of the frozen XGBoost JSON model for exact static browser inference; no conversion.",
+      "size_bytes": 112539,
+      "sha256": "0c43852b2cd1f60dc89efd225331bd6251691a8f835ea3c6df65cb5cfaa274cd"
+    }
+  ],
+  "unavailable": [
+    {
+      "component": "Event E−6:E+6 hydrograph",
+      "reason": "Full hourly context table is not present. Available event metadata provides Rain(E), frozen P99, Antecedent_3h_Rain, Post1–Post3, and Post3_Max only."
+    },
+    {
+      "component": "Satellite imagery",
+      "reason": "No authorized credential-free imagery source was supplied."
+    },
+    {
+      "component": "2012–2024 interactive period summaries",
+      "reason": "Deferred by user instruction; this pass is Evaluation 2025 only."
+    }
+  ]
+}

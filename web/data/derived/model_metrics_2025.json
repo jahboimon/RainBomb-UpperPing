@@ -1,0 +1,21 @@
+{
+  "evaluation_rows": 121296,
+  "evaluation_period": "May–October 2025",
+  "stations": 38,
+  "actual_def5": 95,
+  "predicted_positive": 24264,
+  "average_precision": 0.005980090460188426,
+  "roc_auc": 0.864027263975154,
+  "prevalence": 0.0007832080200501253,
+  "precision_at_0_5": 0.002926145730300033,
+  "recall_at_0_5": 0.7473684210526316,
+  "threshold": 0.5,
+  "confusion_matrix": {
+    "TP": 71,
+    "FN": 24,
+    "FP": 24193,
+    "TN": 97008
+  },
+  "orientation": "rows = Actual; columns = Predicted",
+  "timezone": "UNKNOWN — retained without inference"
+}

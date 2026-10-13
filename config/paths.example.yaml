@@ -1,0 +1,11 @@
+# Copy to paths.yaml for local use. paths.yaml is ignored by Git.
+paths:
+  # All regenerated outputs go here, never into the frozen legacy workspaces.
+  runtime_root: ../RainBomb_Research_Runtime
+
+  # Read-only upstream roots. Adjust for another machine.
+  upstream_root: ../Workplace_Code
+  gis_root: ../Workplace_GIS
+  final_analysis_root: ../RainBomb_FinalAnalysis_v2
+  web_source_root: ../Workplace_Code_Redesign
+  xgb_site_packages: ../Workplace_Code/.venv_xgb/Lib/site-packages
